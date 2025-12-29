@@ -1,0 +1,6 @@
+<svg width="640" height="400" viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="400" rx="28" fill="#E5E7EB"/>
+  <path d="M120 280L240 170L340 260L420 200L520 280" stroke="#9CA3AF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="220" cy="140" r="40" fill="#D1D5DB"/>
+  <text x="200" y="340" fill="#6B7280" font-size="28" font-family="Arial">暂无图片</text>
+</svg>

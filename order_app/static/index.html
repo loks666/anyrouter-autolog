@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>点餐小程序</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div>
+          <p class="badge">前端点餐 + 后端管理 + 日志</p>
+          <h1>点餐管理台</h1>
+          <p>支持图片展示、菜品维护、订单提交与操作日志。</p>
+        </div>
+      </header>
+
+      <section class="card" id="order-section">
+        <h2>点餐</h2>
+        <div class="form-row">
+          <label>
+            客户姓名
+            <input id="customer-name" type="text" placeholder="例如：王小明" />
+          </label>
+          <button id="submit-order" class="primary">提交订单</button>
+        </div>
+        <div id="order-dishes" class="dish-grid"></div>
+        <div class="summary">
+          <span>订单总计：</span>
+          <strong id="order-total">¥0.00</strong>
+        </div>
+        <div id="order-message" class="message"></div>
+      </section>
+
+      <section class="card" id="admin-section">
+        <h2>菜品维护</h2>
+        <form id="dish-form" class="dish-form">
+          <input type="hidden" id="dish-id" />
+          <label>
+            菜品名称
+            <input id="dish-name" required />
+          </label>
+          <label>
+            菜品描述
+            <input id="dish-description" placeholder="简短描述" />
+          </label>
+          <label>
+            价格
+            <input id="dish-price" type="number" step="0.1" min="0" required />
+          </label>
+          <label>
+            图片地址
+            <input id="dish-image" placeholder="/static/images/xxx.svg" />
+          </label>
+          <label class="toggle">
+            <input id="dish-available" type="checkbox" checked />
+            上架中
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="primary">保存菜品</button>
+            <button type="button" id="reset-dish">重置</button>
+          </div>
+        </form>
+        <div id="admin-dishes" class="dish-list"></div>
+      </section>
+
+      <section class="card" id="log-section">
+        <div class="log-header">
+          <h2>操作日志</h2>
+          <button id="refresh-logs">刷新日志</button>
+        </div>
+        <ul id="log-list" class="log-list"></ul>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
